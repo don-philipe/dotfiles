@@ -2,6 +2,7 @@
 syntax on		" Turn on colors
 filetype plugin on	" Enables the ftplugin options
 filetype indent on
+set nocompatible	" turn off vi-compatibility (should be on by default)
 set autoindent		" Automaticaly indent while writing
 set smarttab
 set number
