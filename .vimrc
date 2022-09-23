@@ -42,6 +42,33 @@ highlight Comment ctermfg=012
 "
 " plugins
 " =======
+
+" Use vim-plug as plugin manager
+" Autoinstall it when missing:
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Plugin config section. Plugins will be installed under ~/.vim/plugged/
+call plug#begin()
+
+" Ansible syntax highlighting
+Plug 'pearofducks/ansible-vim'
+
+" NERDtree
+Plug 'preservim/nerdtree'
+
+" Statusline
+Plug 'vim-airline/vim-airline'
+
+" Git diff in sign column
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
+
+
 " ,nn will toggle NERDTree on and off
 "nmap <LocalLeader>n :NERDTreeToggle<cr>
 
