@@ -74,6 +74,9 @@ Plug 'airblade/vim-gitgutter'
 " Latex plugin
 Plug 'lervag/vimtex'
 
+" Python-mode
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+
 call plug#end()
 
 
@@ -83,9 +86,11 @@ call plug#end()
 " special configuration:
 
 " Python
-autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+" ======
+"
+" python-mode configuration (see :help pymode)
+let g:pymode_options_max_line_length = 120
 "let g:pydiction_location = '~/.vim/pydiction-1.2/complete-dict'
-let g:pymode_folding = 0
 
 
 " Vala
