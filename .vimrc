@@ -37,8 +37,8 @@ inoremap <expr>>	strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
 
 " Tab navigation
 nmap <C-t>	:tabnew<CR>
-nmap <C-k>	:tabprev<CR>
-nmap <C-j>	:tabnext<CR>
+nmap <C-h>	:tabprev<CR>
+nmap <C-l>	:tabnext<CR>
 
 " redefine some default colors
 highlight Search ctermfg=Black
