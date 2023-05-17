@@ -35,6 +35,11 @@ inoremap <expr>>	strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
 "inoremap "		""<Left>
 "inoremap '		''<Left>
 
+" Tab navigation
+nmap <C-t>	:tabnew<CR>
+nmap <C-h>	:tabprev<CR>
+nmap <C-l>	:tabnext<CR>
+
 " redefine some default colors
 highlight Search ctermfg=Black
 highlight Comment ctermfg=012
@@ -65,6 +70,9 @@ Plug 'vim-airline/vim-airline'
 
 " Git diff in sign column
 Plug 'airblade/vim-gitgutter'
+
+" Latex plugin
+Plug 'lervag/vimtex'
 
 " Python-mode
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
