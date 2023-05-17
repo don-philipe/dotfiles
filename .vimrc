@@ -69,6 +69,9 @@ Plug 'airblade/vim-gitgutter'
 " Python-mode
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
+" Latex-Suite
+Plug 'vim-latex/vim-latex'
+
 call plug#end()
 
 
@@ -84,6 +87,16 @@ call plug#end()
 let g:pymode_options_max_line_length = 120
 "let g:pydiction_location = '~/.vim/pydiction-1.2/complete-dict'
 
+" vim-gitgutter
+" =============
+"
+let g:gitgutter_sign_added = '▇▇'
+let g:gitgutter_sign_modified = '▇▇'
+let g:gitgutter_sign_removed = '▇▇'
+highlight GitGutterAdd ctermfg = 34
+highlight GitGutterChange ctermfg = 3
+highlight GitGutterDelete ctermfg = 1
+highlight SignColumn ctermbg=0
 
 " Vala
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
