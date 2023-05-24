@@ -1,7 +1,5 @@
 " general configuration:
-syntax on		" Turn on colors
-filetype plugin on	" Enables the ftplugin options
-filetype indent on
+syntax on		" Turn on colors filetype plugin on	" Enables the ftplugin options filetype indent on
 set nocompatible	" turn off vi-compatibility (should be on by default)
 set autoindent		" Automaticaly indent while writing
 set smarttab
@@ -79,6 +77,11 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Latex-Suite
 Plug 'vim-latex/vim-latex'
+
+" tagalong
+" to automatically edit closing HTML tags
+" tag names should be changed either in insert mode or via 'cw'
+Plug 'AndrewRadev/tagalong.vim'
 
 call plug#end()
 
