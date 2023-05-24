@@ -83,6 +83,9 @@ Plug 'vim-latex/vim-latex'
 " tag names should be changed either in insert mode or via 'cw'
 Plug 'AndrewRadev/tagalong.vim'
 
+" vim-css-color
+Plug 'ap/vim-css-color'
+
 call plug#end()
 
 
