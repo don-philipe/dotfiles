@@ -66,6 +66,9 @@ Plug 'preservim/nerdtree'
 " Statusline
 Plug 'vim-airline/vim-airline'
 
+" fugitive (git plugin, mainly for statusline)
+Plug 'tpope/vim-fugitive'
+
 " Git diff in sign column
 Plug 'airblade/vim-gitgutter'
 
