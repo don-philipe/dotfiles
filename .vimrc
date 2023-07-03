@@ -86,6 +86,10 @@ Plug 'AndrewRadev/tagalong.vim'
 " vim-css-color
 Plug 'ap/vim-css-color'
 
+" Format code with one button press
+Plug 'vim-autoformat/vim-autoformat'
+" for HTML formatting install tidy package
+
 call plug#end()
 
 
