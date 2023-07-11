@@ -63,6 +63,9 @@ Plug 'pearofducks/ansible-vim'
 " NERDtree
 Plug 'preservim/nerdtree'
 
+" One NERDtree for all tabs
+Plug 'jistr/vim-nerdtree-tabs'
+
 " Statusline
 Plug 'vim-airline/vim-airline'
 
