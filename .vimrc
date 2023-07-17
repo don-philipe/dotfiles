@@ -96,6 +96,9 @@ Plug 'ap/vim-css-color'
 Plug 'vim-autoformat/vim-autoformat'
 " for HTML formatting install tidy package
 
+" Comment stuff out: one line with `gcc`, selection with `gc`
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 
