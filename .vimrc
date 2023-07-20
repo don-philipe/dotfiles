@@ -38,6 +38,12 @@ nmap <C-t>	:tabnew<CR>
 nmap <C-h>	:tabprev<CR>
 nmap <C-l>	:tabnext<CR>
 
+" Resize windows with arrow keys
+nmap <Up>	:res -1<CR>
+nmap <Down>	:res +1<CR>
+nmap <Left>	:vertical res -1<CR>
+nmap <Right>	:vertical res +1<CR>
+
 " redefine some default colors
 highlight Search ctermfg=Black
 highlight Comment ctermfg=012
