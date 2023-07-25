@@ -81,6 +81,9 @@ Plug 'tpope/vim-fugitive'
 " Git diff in sign column
 Plug 'airblade/vim-gitgutter'
 
+" Show commit messages under cursor with :GitMessenger or <leader>gm
+Plug 'rhysd/git-messenger.vim'
+
 " Latex plugin
 Plug 'lervag/vimtex'
 
