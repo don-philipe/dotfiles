@@ -115,8 +115,8 @@ Plug 'alfredodeza/coveragepy.vim'
 call plug#end()
 
 
-" ,nn will toggle NERDTree on and off
-"nmap <LocalLeader>n :NERDTreeToggle<cr>
+" Set alias command for toggeling nerd tree
+command NT NERDTreeTabsToggle
 
 " special configuration:
 
