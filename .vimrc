@@ -127,11 +127,6 @@ command NT NERDTreeTabsToggle
 let g:pymode_options_max_line_length = 120
 "let g:pydiction_location = '~/.vim/pydiction-1.2/complete-dict'
 
-" NERDtree
-" ========
-"
-command NT NERDTreeTabsToggle
-
 " vim-gitgutter
 " =============
 "
