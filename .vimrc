@@ -108,11 +108,15 @@ Plug 'vim-autoformat/vim-autoformat'
 " Comment stuff out: one line with `gcc`, selection with `gc`
 Plug 'tpope/vim-commentary'
 
+" Show python coverage, needs coverage.py installed (globally)
+" use with `:Coveragepy report` or `:Coveragepy show`
+Plug 'alfredodeza/coveragepy.vim'
+
 call plug#end()
 
 
-" ,nn will toggle NERDTree on and off
-"nmap <LocalLeader>n :NERDTreeToggle<cr>
+" Set alias command for toggeling nerd tree
+command NT NERDTreeTabsToggle
 
 " special configuration:
 
