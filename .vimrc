@@ -72,6 +72,9 @@ Plug 'preservim/nerdtree'
 " One NERDtree for all tabs
 Plug 'jistr/vim-nerdtree-tabs'
 
+" Git plugin for NERDtree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " Statusline
 Plug 'vim-airline/vim-airline'
 
