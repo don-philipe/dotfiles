@@ -1,5 +1,6 @@
 " general configuration:
-syntax on		" Turn on colors filetype plugin on	" Enables the ftplugin options filetype indent on
+syntax on
+filetype plugin on	" Enables the ftplugin options filetype indent on
 set nocompatible	" turn off vi-compatibility (should be on by default)
 set autoindent		" Automaticaly indent while writing
 set smarttab
@@ -115,6 +116,13 @@ Plug 'tpope/vim-commentary'
 " use with `:Coveragepy report` or `:Coveragepy show`
 Plug 'alfredodeza/coveragepy.vim'
 
+" Gruvbox color scheme
+Plug 'morhetz/gruvbox'
+
+" Ripgrep plugin for recursive search
+" use `:Rg <pattern>` to search in current directory
+Plug 'jremmen/vim-ripgrep'
+
 call plug#end()
 
 
@@ -130,16 +138,26 @@ command NT NERDTreeTabsToggle
 let g:pymode_options_max_line_length = 120
 "let g:pydiction_location = '~/.vim/pydiction-1.2/complete-dict'
 
+" Gruvbox color scheme
+" ====================
+"
+colorscheme gruvbox
+
+" vim-ripgrep
+" ===========
+"
+let g:rg_highlight = 1
+
 " vim-gitgutter
 " =============
 "
 let g:gitgutter_sign_added = '▇▇'
 let g:gitgutter_sign_modified = '▇▇'
 let g:gitgutter_sign_removed = '▇▇'
-highlight GitGutterAdd ctermfg = 2
-highlight GitGutterChange ctermfg = 3
-highlight GitGutterDelete ctermfg = 1
-highlight SignColumn ctermbg=0
+highlight GitGutterAdd ctermfg = 2 guifg=#008000
+highlight GitGutterChange ctermfg = 3 guifg=#808000
+highlight GitGutterDelete ctermfg = 1 guifg=#800000
+highlight SignColumn ctermbg=0 guibg=#000000
 
 " Vala
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
