@@ -61,6 +61,11 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Shortcut for JSON formatting via jq
+if executable('jq')
+  command JQ	%!jq .
+endif
+
 " Plugin config section. Plugins will be installed under ~/.vim/plugged/
 call plug#begin()
 
