@@ -141,6 +141,7 @@ let g:pymode_options_max_line_length = 120
 " Gruvbox color scheme
 " ====================
 "
+set background=dark
 colorscheme gruvbox
 
 " vim-ripgrep
