@@ -35,7 +35,8 @@ inoremap <expr>>	strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
 "inoremap '		''<Left>
 
 " Tab navigation
-nmap <C-t>	:tabnew<CR>
+" new tab and move to previous window (NERDTree if open)
+nmap <C-t>	:tabnew <bar> :wincmd p<CR>
 nmap <C-h>	:tabprev<CR>
 nmap <C-l>	:tabnext<CR>
 
