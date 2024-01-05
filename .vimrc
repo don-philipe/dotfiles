@@ -128,6 +128,10 @@ Plug 'morhetz/gruvbox'
 " use `:Rg <pattern>` to search in current directory
 Plug 'jremmen/vim-ripgrep'
 
+" Multi language linting tool
+" - https://github.com/koalaman/shellcheck install through package manager
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 
