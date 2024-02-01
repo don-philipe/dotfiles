@@ -1,0 +1,6 @@
+# https://github.com/alacritty/alacritty-theme
+import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+
+[colors.cursor]
+cursor = "#00ff00"
+text = "#000000"
