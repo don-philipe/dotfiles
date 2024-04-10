@@ -12,6 +12,7 @@ set showcmd
 set scrolloff=8
 set enc=utf-8
 set wrapscan		" start searching at the beginning when EOF reached
+set matchpairs+=<:>	" add angle brackets to list of matching bracket pairs
 
 " simple appending closing characters automatically
 inoremap {		{}<Left>
@@ -165,9 +166,11 @@ let g:rg_highlight = 1
 let g:gitgutter_sign_added = '▇▇'
 let g:gitgutter_sign_modified = '▇▇'
 let g:gitgutter_sign_removed = '▇▇'
+let g:gitgutter_sign_modified_removed = '▇▇'
 highlight GitGutterAdd ctermfg = 2 guifg=#008000
 highlight GitGutterChange ctermfg = 3 guifg=#808000
 highlight GitGutterDelete ctermfg = 1 guifg=#800000
+highlight GitGutterChangeDeleteLine ctermfg = 3 guifg=#808000
 highlight SignColumn ctermbg=0 guibg=#000000
 
 " Vala
