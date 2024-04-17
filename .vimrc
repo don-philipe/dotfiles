@@ -37,9 +37,10 @@ inoremap <expr>>	strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
 
 " Tab navigation
 " new tab and move to previous window (NERDTree if open)
-nmap <C-t>	:tabnew <bar> :wincmd p<CR>
+nmap <C-t>	:tabnew <bar> :wincmd h<CR>
 nmap <C-h>	:tabprev<CR>
 nmap <C-l>	:tabnext<CR>
+nmap <C-x>	:tabclose<CR>
 
 " Resize windows with arrow keys
 nmap <Up>	:res -1<CR>
@@ -63,6 +64,9 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Open the existing NERDTree on each new tab
+autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
+
 " Shortcut for JSON formatting via jq
 if executable('jq')
   command JQ	%!jq .
@@ -76,9 +80,6 @@ Plug 'pearofducks/ansible-vim'
 
 " NERDtree
 Plug 'preservim/nerdtree'
-
-" One NERDtree for all tabs
-Plug 'jistr/vim-nerdtree-tabs'
 
 " Git plugin for NERDtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -138,7 +139,7 @@ call plug#end()
 
 
 " Set alias command for toggeling nerd tree
-command NT NERDTreeTabsToggle
+command NT NERDTree
 
 " special configuration:
 
