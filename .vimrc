@@ -135,6 +135,8 @@ Plug 'jremmen/vim-ripgrep'
 " - https://github.com/koalaman/shellcheck install through package manager
 Plug 'dense-analysis/ale'
 
+Plug 'chrisbra/csv.vim'
+
 call plug#end()
 
 
