@@ -13,6 +13,8 @@ set scrolloff=8
 set enc=utf-8
 set wrapscan		" start searching at the beginning when EOF reached
 set matchpairs+=<:>	" add angle brackets to list of matching bracket pairs
+set path+=**		" search files in all subdirs with 'find' command
+set wildmenu		" show all matching files when tab completing
 
 " simple appending closing characters automatically
 inoremap {		{}<Left>
