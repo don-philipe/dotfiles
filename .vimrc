@@ -13,8 +13,8 @@ set scrolloff=8
 set enc=utf-8
 set wrapscan		" start searching at the beginning when EOF reached
 set matchpairs+=<:>	" add angle brackets to list of matching bracket pairs
-set path+=**		" search files in all subdirs with 'find' command
 set wildmenu		" show all matching files when tab completing
+set updatetime=1000	" updates vim TUI every second (especially gitgutter signs), affects swap write rate as well
 
 " simple appending closing characters automatically
 inoremap {		{}<Left>
@@ -177,6 +177,15 @@ highlight GitGutterChange ctermfg = 3 guifg=#808000
 highlight GitGutterDelete ctermfg = 1 guifg=#800000
 highlight GitGutterChangeDeleteLine ctermfg = 3 guifg=#808000
 highlight SignColumn ctermbg=0 guibg=#000000
+
+" git-messenger
+" =============
+"
+" show diff of current file in message popup
+let g:git_messenger_include_diff = "current"
+" move cursor into popup
+let g:git_messenger_always_into_popup = v:true
+let g:git_messenger_max_popup_height = 30
 
 " Vala
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
