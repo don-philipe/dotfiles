@@ -15,6 +15,7 @@ set wrapscan		" start searching at the beginning when EOF reached
 set matchpairs+=<:>	" add angle brackets to list of matching bracket pairs
 set wildmenu		" show all matching files when tab completing
 set updatetime=1000	" updates vim TUI every second (especially gitgutter signs), affects swap write rate as well
+set relativenumber	" turn on relative line numbering
 
 " simple appending closing characters automatically
 inoremap {		{}<Left>
