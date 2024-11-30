@@ -1,6 +1,6 @@
 # https://github.com/alacritty/alacritty-theme
-import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
-shell = "/bin/zsh"
+general.import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+terminal.shell = "/bin/zsh"
 
 [colors.cursor]
 cursor = "#00ff00"
