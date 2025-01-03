@@ -82,6 +82,7 @@ source $ZSH/oh-my-zsh.sh
 
 setopt appendhistory autocd extendedglob
 setopt GLOB_COMPLETE
+setopt HIST_IGNORE_SPACE  # ignore command lines when first character is a space
 unsetopt beep
 
 ### Enter Vim-Mode ###

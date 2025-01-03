@@ -39,10 +39,12 @@ startx()
 }
 
 # generate qrcode and display it
-qrcode()
+func_qrcode()
 {
 	qrencode "$1" -o - | feh -
 }
+# Create alias calling the function with space prefix, so that it is not logged in history file. This avoids logging passwords and stuff.
+alias qrcode=" func_qrcode"
 
 ogg2mp3()
 {
