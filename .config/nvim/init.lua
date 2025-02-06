@@ -12,6 +12,7 @@ require("config.mason")
 require("config.treesitter")
 require("config.gitsigns")
 require("config.lualine")
+require("config.telescope")
 
 -- for some reason this must be placed in init.lua file
 -- it doesn't work in any lua/config/*.lua files
