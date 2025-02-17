@@ -1,5 +1,6 @@
 require("config.remap")
 require("config.set")
+require("config.commands")
 
 -- plugin manager
 require("config.lazy")
