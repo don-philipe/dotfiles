@@ -2,6 +2,10 @@
 cursor = "#00ff00"
 text = "#000000"
 
+[env]
+# set this to have true color when using nvim etc. in remote tmux session
+TERM = "xterm-256color"
+
 [font]
 size = 9
 
