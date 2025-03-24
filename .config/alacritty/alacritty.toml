@@ -5,6 +5,9 @@ text = "#000000"
 [font]
 size = 9
 
+[font.normal]
+family = "Jet Brains Mono Nerd Font"
+
 [general]
 # https://github.com/alacritty/alacritty-theme
 import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
