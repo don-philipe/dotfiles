@@ -11,6 +11,7 @@ size = 9
 
 [font.normal]
 family = "Jet Brains Mono Nerd Font"
+#family = "Mononoki Nerd Font"
 
 [general]
 # https://github.com/alacritty/alacritty-theme
