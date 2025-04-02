@@ -1,6 +1,8 @@
 require("config.remap")
 require("config.set")
 require("config.commands")
+-- env vars used only for neovim
+require("config.env")
 
 -- plugin manager
 require("config.lazy")

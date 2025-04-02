@@ -10,4 +10,3 @@ vim.opt.scrolloff = 8
 vim.opt.incsearch = true
 
 vim.opt.signcolumn = "yes"
-
