@@ -34,4 +34,9 @@ require'nvim-treesitter.configs'.setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
+
+    -- indent with treesitter is currently experimental, just mark text and hit "="
+    indent = {
+        enable = true,
+    },
 }
