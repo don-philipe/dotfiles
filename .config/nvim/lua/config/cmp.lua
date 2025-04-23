@@ -24,4 +24,9 @@ cmp.setup({
       vim.snippet.expand(args.body)
     end,
   },
+  -- switch on rounded borders in floating completion windows
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
 })
