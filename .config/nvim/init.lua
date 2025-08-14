@@ -20,6 +20,8 @@ require("config.gitsigns")
 require("config.lualine")
 require("config.telescope")
 require("config.indentline")
+require("config.redmine")
+require("config.diffview")
 
 -- for some reason this must be placed in init.lua file
 -- it doesn't work in any lua/config/*.lua files
