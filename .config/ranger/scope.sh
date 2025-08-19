@@ -87,6 +87,12 @@ handle_extension() {
             pandoc -s -t markdown -- "${FILE_PATH}" && exit 5
             exit 1;;
 
+	## DOCX
+	docx)
+	    ## Uses: https://github.com/bgreenwell/doxx
+	    doxx "${FILE_PATH}" && exit 5
+	    exit 1;;
+
         ## XLSX
         xlsx)
             ## Preview as csv conversion
