@@ -17,11 +17,16 @@ table.insert(vimgrep_arguments, "--glob")
 table.insert(vimgrep_arguments, "!**/.git/*")
 
 require('telescope').setup({
-  defaults = {
-    vimgrep_arguments = vimgrep_arguments,
-    layout_strategy = 'vertical',
-    layout_config = {
-      vertical = { width = 0.95 }
+    defaults = {
+        vimgrep_arguments = vimgrep_arguments,
+        layout_strategy = 'vertical',
+        layout_config = {
+            vertical = { width = 0.95 }
+        },
     },
-  },
+    pickers = {
+        find_files = {
+            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+        },
+    },
 })
