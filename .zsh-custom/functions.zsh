@@ -71,6 +71,14 @@ git-blobs()
 	  $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
 }
 
+sshs()
+{
+	tmprc=$(ssh $1 "mktemp --directory")
+	scp -q $HOME/.zshrc $1:$tmprc
+	ssh -t $1 "export ZDOTDIR=${tmprc}; exec zsh"
+	ssh $1 "rm -rf ${tmprc}"
+}
+
 # show the current mode:
 #PR_VIMODE="#"
 #function zle-keymap-select
