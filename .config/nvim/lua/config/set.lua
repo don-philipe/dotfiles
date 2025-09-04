@@ -12,3 +12,7 @@ vim.opt.incsearch = true
 vim.opt.signcolumn = "yes"
 
 vim.o.termguicolors = true
+
+vim.diagnostic.config({
+    virtual_text = true,
+})
