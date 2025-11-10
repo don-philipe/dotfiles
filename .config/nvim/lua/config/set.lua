@@ -16,3 +16,5 @@ vim.o.termguicolors = true
 vim.diagnostic.config({
     virtual_text = true,
 })
+
+vim.opt.undofile = true
