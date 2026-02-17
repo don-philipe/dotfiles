@@ -32,3 +32,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
     end,
 })
+
+-- helper plugin configuration
+require'py_lsp'.setup{
+    host_python = '/usr/bin/python3',
+    default_venv_name = "venv",
+    language_server = "pylsp",
+}
