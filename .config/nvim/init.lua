@@ -1,3 +1,6 @@
+-- utilities functions
+require("utils")
+
 require("config.remap")
 require("config.set")
 require("config.commands")
@@ -11,7 +14,6 @@ require("config.lazy")
 
 -- plugins
 require("config.cmp")
-require("config.gen-private")
 require("config.lsp")
 require("config.mason")
 require("config.treesitter")
@@ -22,6 +24,8 @@ require("config.telescope")
 require("config.indentline")
 require("config.redmine")
 require("config.diffview")
+require("config.dap")
+require("config.parrot")
 
 -- for some reason this must be placed in init.lua file
 -- it doesn't work in any lua/config/*.lua files
