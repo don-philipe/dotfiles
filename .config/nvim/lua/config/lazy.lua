@@ -33,6 +33,7 @@ require("lazy").setup({
     install = { colorscheme = { "habamax" } },
     -- automatically check for plugin updates
     checker = { enabled = true },
+    change_detection = { enabled = false }, -- active change detection seems to eat up memory over time https://github.com/folke/lazy.nvim/issues/1008
     ui = {
 	border = "rounded",
     },
