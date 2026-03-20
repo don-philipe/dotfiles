@@ -18,3 +18,5 @@ vim.diagnostic.config({
 })
 
 vim.opt.undofile = true
+
+vim.o.winborder = 'rounded'

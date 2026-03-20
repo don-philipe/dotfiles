@@ -25,6 +25,7 @@ cmp.setup({
     end,
   },
   -- switch on rounded borders in floating completion windows
+  -- additionally vim.o.winborder = 'rounded' must be set (set.lua)
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
