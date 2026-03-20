@@ -5,6 +5,7 @@ text = "#000000"
 [env]
 # set this to have true color when using nvim etc. in remote tmux session
 TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
 size = 9

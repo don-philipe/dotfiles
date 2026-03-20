@@ -1,5 +1,5 @@
 -- utilities functions
-require("utils")
+--require("utils")
 
 require("config.remap")
 require("config.set")
@@ -22,10 +22,11 @@ require("config.gitsigns")
 require("config.lualine")
 require("config.telescope")
 require("config.indentline")
-require("config.redmine")
+--require("config.redmine")
 require("config.diffview")
 require("config.dap")
 require("config.parrot")
+--require("config.gitea")
 
 -- for some reason this must be placed in init.lua file
 -- it doesn't work in any lua/config/*.lua files

@@ -106,7 +106,7 @@ autoload -U promptinit
 promptinit
 
 export XDG_CONFIG_HOME=$HOME/.config/
-export EDITOR=vim
+export EDITOR=nvim
 
 alias ls='ls --color=always'
 alias grep='grep --color=always'
@@ -114,6 +114,7 @@ alias less='less -R'
 alias dd='dd status=progress oflag=direct'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias hibernate='sudo systemctl hibernate'
-alias ssh="TERM=linux ssh" # for not complaining urxvt about terminals without TERM set
+#alias ssh="TERM=linux ssh" # for not complaining urxvt about terminals without TERM set
 alias cpup="cp -T $0 ../$0"
 alias pythonweb="python -m SimpleHTTPServer 8090"
+alias sayhi="echo hi"
