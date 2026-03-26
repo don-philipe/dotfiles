@@ -21,6 +21,10 @@ checkcert()
 {
 	openssl s_client -connect "$1":443 2>/dev/null
 }
+pem2crt()
+{
+	openssl x509 -inform PEM -in "$1" -out "${1%.*}.crt"
+}
 
 # works only without tex-ending
 tex2pdf()
