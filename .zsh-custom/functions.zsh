@@ -75,12 +75,28 @@ git-blobs()
 	  $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
 }
 
+# Do a short code review via several git commands
+# https://piechowski.io/post/git-commands-before-reading-code/
+git-review()
+{
+	echo "### What Changes the Most (1y ago) ###"
+	git log --format=format: --name-only --since="1 year ago" | sort | uniq -c | sort -nr | head -20
+	echo "\n### Who Built This ###"
+	git --no-pager shortlog -sn --no-merges
+	echo "\n### Where Do Bugs Cluster ###"
+	git log -i -E --grep="fix|bug|broken" --name-only --format='' | sort | uniq -c | sort -nr | head -20
+	echo "\n### Is This Project Accelerating or Dying (commit count per m) ###"
+	git log --format='%ad' --date=format:'%Y-%m' | sort | uniq -c
+	echo "\n### How Often Is the Team Firefighting ###"
+	git log --oneline --since="1 year ago" | grep -iE 'revert|hotfix|emergency|rollback'
+}
+
 sshs()
 {
 	tmprc=$(ssh $1 "mktemp --directory")
 	scp -q $HOME/.zshrc $1:$tmprc
-	ssh -t $1 "export ZDOTDIR=${tmprc}; exec zsh"
-	ssh $1 "rm -rf ${tmprc}"
+	ssh -t $1 "export ZDOTDIR=${tmprc}; trap 'rm -rf ${tmprc}' EXIT INT TERM; exec zsh"
+	#ssh $1 "rm -rf ${tmprc}"
 }
 
 # show the current mode:
