@@ -23,3 +23,8 @@ local function run_and_paste()
 	vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { out })
 end
 vim.keymap.set("n", "<C-c>", run_and_paste)
+
+-- grep string under cursor in telescope
+vim.keymap.set('n', '<leader>fw', function()
+    require('telescope.builtin').grep_string()
+end, { desc = 'Find word under cursor' })
